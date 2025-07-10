@@ -1,0 +1,15 @@
+name: Post to Fediverse Example
+on:
+
+jobs:
+  post-to-fediverse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Post to Fediverse
+        uses: ./
+        with:
+          access_token: ${{ secrets.FEDIVERSE_ACCESS_TOKEN }}
+          host_name: 'your-instance.com'
+          message: 'Hello from a GitHub Action!'
