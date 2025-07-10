@@ -21,7 +21,7 @@ API_URL="https://${INPUT_HOST_NAME}${INPUT_API_PATH}"
 ACCESS_TOKEN="$INPUT_ACCESS_TOKEN"
 MESSAGE="$INPUT_MESSAGE"
 
-RESPONSE=$(curl -s -w "%{\http_code}" -X POST "$API_URL" \
+RESPONSE=$(curl -s -w http_code -X POST "$API_URL" \
   -H "Authorization: Bearer $ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d "{\"status\":\"$MESSAGE\"}")
