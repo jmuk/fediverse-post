@@ -11,5 +11,5 @@ jobs:
         uses: ./
         with:
           access_token: ${{ secrets.FEDIVERSE_ACCESS_TOKEN }}
-          host_name: 'your-instance.com'
+          host_name: ${{ secrets.FEDIVERSE_HOST_NAME }}
           message: 'Hello from a GitHub Action!'
